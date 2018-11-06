@@ -13,7 +13,7 @@ import { addNote, deleteNote } from "./actions";
 import Note from "./components/note";
 
 class Home extends Component {
-    constructor(props) {
+    constructor(props: any) {
         super(props);
         this.state = {
             noteText: ""
@@ -58,14 +58,14 @@ class Home extends Component {
         );
     }
 
-    addNote() {
+    public addNote(): void {
         if (this.state.noteText) {
             this.props.onAddNote(this.state.noteText);
             this.setState({ noteText: "" });
         }
     }
 
-    deleteNote(key) {
+    public deleteNote(key: any): void {
         this.props.noteArray.splice(key, 1);
         this.setState({ noteArray: this.props.noteArray });
     }
