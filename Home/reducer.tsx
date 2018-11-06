@@ -2,7 +2,7 @@ const INITIAL_STATE = {
     noteArray: []
 };
 
-export default (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action: any) => {
     switch (action.type) {
         case "ADD_NOTE":
             return {
