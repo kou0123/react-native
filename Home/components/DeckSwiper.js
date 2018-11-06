@@ -5,7 +5,7 @@ const cards = [
     {
         text: 'Card One',
         name: 'One',
-        image: require('./img/swiper-1.png'),
+        image: require('./img/test.jpg'),
     },
 ];
 export default class DeckSwiperExample extends Component {
