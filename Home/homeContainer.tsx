@@ -12,16 +12,27 @@ import { addNote, deleteNote } from "./actions";
 
 import Note from "./components/note";
 
-class Home extends Component {
+interface Props {
+    onAddNote: Function,
+    noteArray: any
+}
+interface State {
+    noteText: any,
+    noteArray: any
+}
+
+class Home extends Component<Props, State> {
+    
     constructor(props: any) {
         super(props);
         this.state = {
-            noteText: ""
+            noteText : "",
+            noteArray: {}
         };
     }
 
     render() {
-        let notes = this.props.noteArray.map((val, key) => {
+        let notes = this.props.noteArray.map((val: any, key: any) => {
             return (
                 <Note
                     key={key}
@@ -71,15 +82,15 @@ class Home extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
     return {
         noteArray: state.home.noteArray
     };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: any) => {
     return {
-        onAddNote: text => dispatch(addNote(text))
+        onAddNote: (text: any) => dispatch(addNote(text))
     };
 };
 

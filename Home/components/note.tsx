@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-export default class Note extends Component {
+interface Props {
+    keyval: any,
+    deleteMethod: () => void,
+    val: {
+        noteText: any
+    }
+}
+
+export default class Note extends Component<Props, {}> {
     render() {
         return (
             <View key={this.props.keyval} style={styles.note}>

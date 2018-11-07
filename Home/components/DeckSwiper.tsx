@@ -16,7 +16,7 @@ export default class DeckSwiperExample extends Component {
                 <View>
                     <DeckSwiper
                         dataSource={cards}
-                        renderItem={item =>
+                        renderItem={(item: any) =>
                             <Card style={{ elevation: 3 }}>
                                 <CardItem>
                                     <Left>
