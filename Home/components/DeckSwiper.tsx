@@ -7,6 +7,16 @@ const cards = [
         name: 'One',
         image: require('./img/test.jpg'),
     },
+    {
+        text: 'Card Two',
+        name: 'Two',
+        image: require('./img/test2.jpg'),
+    },
+    {
+        text: 'Card Three',
+        name: 'Three',
+        image: require('./img/test3.jpg'),
+    }
 ];
 export default class DeckSwiperExample extends Component {
     render() {

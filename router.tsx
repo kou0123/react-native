@@ -15,34 +15,29 @@ const RouterComponent = () => {
                 key='root'
                 swipeEnabled={ true }
             >
-                <Scene key="ホーム" component={Home}
-                       iconName='home'
-                       iconColor='red'
-                       icon={TabBarIcon}
-                />
                 <Scene key="検索" component={Search}
                        iconName='search'
-                       iconColor='red'
+                       iconColor='pink'
                        icon={TabBarIcon}
                 />
-                <Scene key="メッセージ" component={Match}
-                       iconName='comments-o'
-                       iconColor='red'
+                <Scene key="通話" component={Match}
+                       iconName='phone'
+                       iconColor='pink'
                        icon={TabBarIcon}
                 />
                 <Scene key="毎日" component={Daily}
                        iconName='gift'
-                       iconColor='red'
+                       iconColor='pink'
                        icon={TabBarIcon}
                 />
                 <Scene key="相手から" component={Heart}
                        iconName='heart'
-                       iconColor='red'
+                       iconColor='pink'
                        icon={TabBarIcon}
                 />
                 <Scene key="プロフ" component={Profile}
                        iconName='user'
-                       iconColor='red'
+                       iconColor='pink'
                        icon={TabBarIcon}
                 />
             </Tabs>
@@ -55,7 +50,7 @@ const TabBarIcon = (props: any) => (
         <Icon
             name={props.iconName}
             type="FontAwesome"
-            color={props.focused ? 'blue' : 'grey'}
+            color={props.focused ? 'pink' : 'grey'}
             style={styles.tabIconStyle}
         />
     </View>
@@ -70,7 +65,8 @@ const styles: any = {
         width: 24,
         height: 24,
         fontSize: 24,
-    },
+        color: 'pink'
+    }
 }
 
 export default RouterComponent;
