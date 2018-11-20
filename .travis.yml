@@ -27,6 +27,7 @@ matrix:
           - $HOME/.gradle/caches/
           - $HOME/.gradle/wrapper/
       before_install:
+        - chmod +x .travis/before_install.sh
         - nvm install 8
         - .travis/before_install.sh
         - echo yes | sdkmanager "platforms;android-26"
@@ -37,7 +38,9 @@ matrix:
           - build-tools-26.0.3
           - tools
       env: LANE='android'
-      script: .travis/run.sh
+      script: 
+        - chmod +x .travis/run.sh
+        - .travis/run.sh
 
     - language: objective-c
       os: osx
@@ -49,10 +52,13 @@ matrix:
         - yarn
       env: LANE='ios'
       before_install:
+        - chmod +x .travis/before_install.sh
         - .travis/before_install.sh
       before_script:
         - nvm install 8
         - sudo easy_install virtualenv
         - virtualenv ~/virtualenv
         - source ~/virtualenv/bin/activate
-      script: .travis/run.sh
+      script:
+        - chmod +x .travis/run.sh 
+        - .travis/run.sh
