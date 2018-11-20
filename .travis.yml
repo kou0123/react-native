@@ -37,7 +37,7 @@ matrix:
           - build-tools-26.0.3
           - tools
       env: LANE='android'
-      script: .travis/run.sh
+      script: ./.travis/run.sh
 
     - language: objective-c
       os: osx
@@ -55,4 +55,4 @@ matrix:
         - sudo easy_install virtualenv
         - virtualenv ~/virtualenv
         - source ~/virtualenv/bin/activate
-      script: .travis/run.sh
+      script: ./.travis/run.sh
