@@ -27,7 +27,7 @@ matrix:
           - $HOME/.gradle/caches/
           - $HOME/.gradle/wrapper/
       before_install:
-        - cd project
+        - ls
         - nvm install 8
         - .travis/before_install.sh
         - echo yes | sdkmanager "platforms;android-26"
@@ -50,7 +50,7 @@ matrix:
         - yarn
       env: LANE='ios'
       before_install:
-        - cd project
+        - ls
         - .travis/before_install.sh
       before_script:
         - nvm install 8
