@@ -69,6 +69,7 @@ class Home extends Component<Props, State> {
         );
     }
 
+
     public addNote(): void {
         if (this.state.noteText) {
             this.props.onAddNote(this.state.noteText);
