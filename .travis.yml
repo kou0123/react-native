@@ -6,11 +6,6 @@ matrix:
       android:
         components:
           - android-21
-          - ...
-      before_install:
-         - whatever
     - language: objective-c
       os: osx
       osx_image: xcode7.3
-      before_install:
-         - carthage update
